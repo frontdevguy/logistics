@@ -22,6 +22,7 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "bootstrap": "^3.4.1",
         "immer": "^5.1.0",
         "react-router-dom": "^5.1.2",
         "use-immer": "^0.3.5"
