@@ -1,6 +1,7 @@
 import React from 'react';
 import { useImmerReducer } from 'use-immer';
 import { appReducer } from '../reducers';
+import { TrackingProvider } from './TrackingContext';
 
 const initialState = {
     users : []
@@ -14,7 +15,9 @@ export default ({children}) => {
     return (
       <AppContext.Provider value={state}>
         <AppDispatchContext.Provider value={dispatch}>
-            {children}
+            <TrackingProvider>
+                {children}
+            </TrackingProvider>
         </AppDispatchContext.Provider>
     </AppContext.Provider>
     )

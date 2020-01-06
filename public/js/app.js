@@ -58766,6 +58766,182 @@ window.axios.defaults.headers.common = {
 
 /***/ }),
 
+/***/ "./resources/js/components/HomeTracking.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/HomeTracking.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../api */ "./resources/js/api/index.js");
+/* harmony import */ var _contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contexts/TrackingContext */ "./resources/js/contexts/TrackingContext.js");
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      trackingCode = _useState2[0],
+      setTrackingCode = _useState2[1];
+
+  var _useTrackingState = Object(_contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__["useTrackingState"])(),
+      updateTrackingState = _useTrackingState.updateTrackingState;
+
+  var initiateGetTrackingDetails = function initiateGetTrackingDetails(e) {
+    setTrackingCode(e.target.value);
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    function getTrackingDetailsFromCode() {
+      return _getTrackingDetailsFromCode.apply(this, arguments);
+    }
+
+    function _getTrackingDetailsFromCode() {
+      _getTrackingDetailsFromCode = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var _ref, data;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!trackingCode) {
+                  _context.next = 6;
+                  break;
+                }
+
+                _context.next = 3;
+                return _api__WEBPACK_IMPORTED_MODULE_2__["default"].getTrackingDetailsFromCode(trackingCode);
+
+              case 3:
+                _ref = _context.sent;
+                data = _ref.data;
+                updateTrackingState(function (trackingState) {
+                  return _objectSpread({}, trackingState, {
+                    trackingDetails: data
+                  });
+                });
+
+              case 6:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+      return _getTrackingDetailsFromCode.apply(this, arguments);
+    }
+
+    getTrackingDetailsFromCode();
+  }, [trackingCode]);
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "main"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "cover black",
+    "data-color": "black"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+    className: "logo cursive"
+  }, "Jeay's Logistics"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "content"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
+    className: "motto"
+  }, "Track your shipped goods using our secured service channel."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "subscribe"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
+    className: "info-text"
+  }, "Enter your tracking number below to track your goods."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 "
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "form-inline",
+    role: "form"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "form-group",
+    style: {
+      width: '100%'
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+    className: "sr-only"
+  }, "Tracking Number"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    onBlur: initiateGetTrackingDetails,
+    type: "text",
+    style: {
+      textAlign: 'center',
+      textTransform: 'capitalize',
+      minHeight: '50px',
+      width: '100%',
+      borderTopRightRadius: '0px',
+      borderBottomRightRadius: '0px'
+    },
+    className: "form-control transparent",
+    placeholder: "Enter tracking number"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
+    style: {
+      display: 'block',
+      marginTop: '5px',
+      textAlign: 'center',
+      color: 'coral'
+    }
+  }, " Click outsite the box after typing tracking number "))))))))));
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/HomeTrackingResult.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/HomeTrackingResult.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TrackingContext */ "./resources/js/contexts/TrackingContext.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var _useTrackingState = Object(_contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_1__["useTrackingState"])(),
+      _useTrackingState$tra = _useTrackingState.trackingState.trackingDetails,
+      name = _useTrackingState$tra.name,
+      age = _useTrackingState$tra.age;
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " Your tracking result "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " Name: ", name, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " Age: ", age, " ")));
+});
+
+/***/ }),
+
 /***/ "./resources/js/contexts/AppContext.js":
 /*!*********************************************!*\
   !*** ./resources/js/contexts/AppContext.js ***!
@@ -58783,6 +58959,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var use_immer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! use-immer */ "./node_modules/use-immer/dist/use-immer.module.js");
 /* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers */ "./resources/js/reducers/index.js");
+/* harmony import */ var _TrackingContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TrackingContext */ "./resources/js/contexts/TrackingContext.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -58790,6 +58967,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -58811,7 +58989,7 @@ var AppDispatchContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createCont
     value: state
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppDispatchContext.Provider, {
     value: dispatch
-  }, children));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TrackingContext__WEBPACK_IMPORTED_MODULE_3__["TrackingProvider"], null, children)));
 });
 var useAppState = function useAppState() {
   var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(AppContext);
@@ -58827,6 +59005,60 @@ var useAppDispatch = function useAppDispatch() {
 
   if (context === undefined) {
     throw new Error('useAppDispatch must be used within a AppProvider');
+  }
+
+  return context;
+};
+
+/***/ }),
+
+/***/ "./resources/js/contexts/TrackingContext.js":
+/*!**************************************************!*\
+  !*** ./resources/js/contexts/TrackingContext.js ***!
+  \**************************************************/
+/*! exports provided: TrackingContext, TrackingProvider, useTrackingState */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrackingContext", function() { return TrackingContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TrackingProvider", function() { return TrackingProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useTrackingState", function() { return useTrackingState; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+var initialState = {
+  trackingDetails: false
+};
+var TrackingContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
+var TrackingProvider = function TrackingProvider(_ref) {
+  var children = _ref.children;
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(initialState),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      trackingState = _React$useState2[0],
+      updateTrackingState = _React$useState2[1];
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TrackingContext.Provider, {
+    value: {
+      trackingState: trackingState,
+      updateTrackingState: updateTrackingState
+    }
+  }, children);
+};
+var useTrackingState = function useTrackingState() {
+  var context = react__WEBPACK_IMPORTED_MODULE_0___default.a.useContext(TrackingContext);
+
+  if (context === undefined) {
+    throw new Error('useTrackingState must be used within a TrackingProviderr');
   }
 
   return context;
@@ -58953,29 +59185,15 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _style_homestyle_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style/homestyle.css */ "./resources/js/pages/style/homestyle.css");
-/* harmony import */ var _style_homestyle_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_homestyle_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../api */ "./resources/js/api/index.js");
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_homestyle_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style/homestyle.css */ "./resources/js/pages/style/homestyle.css");
+/* harmony import */ var _style_homestyle_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_homestyle_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contexts/TrackingContext */ "./resources/js/contexts/TrackingContext.js");
+/* harmony import */ var _components_HomeTracking__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/HomeTracking */ "./resources/js/components/HomeTracking.js");
+/* harmony import */ var _components_HomeTrackingResult__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/HomeTrackingResult */ "./resources/js/components/HomeTrackingResult.js");
 
 
 
@@ -58983,114 +59201,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      trackingCode = _useState2[0],
-      setTrackingCode = _useState2[1];
+  var _useTrackingState = Object(_contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__["useTrackingState"])(),
+      trackingState = _useTrackingState.trackingState;
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      trackingDetails = _useState4[0],
-      setTrackinDetails = _useState4[1];
-
-  var initiateGetTrackingDetails = function initiateGetTrackingDetails(e) {
-    setTrackingCode(e.target.value);
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    function getTrackingDetailsFromCode() {
-      return _getTrackingDetailsFromCode.apply(this, arguments);
-    }
-
-    function _getTrackingDetailsFromCode() {
-      _getTrackingDetailsFromCode = _asyncToGenerator(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _ref, data;
-
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (!trackingCode) {
-                  _context.next = 7;
-                  break;
-                }
-
-                _context.next = 3;
-                return _api__WEBPACK_IMPORTED_MODULE_5__["default"].getTrackingDetailsFromCode(trackingCode);
-
-              case 3:
-                _ref = _context.sent;
-                data = _ref.data;
-                setTrackinDetails(data);
-                console.log(data);
-
-              case 7:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }));
-      return _getTrackingDetailsFromCode.apply(this, arguments);
-    }
-
-    getTrackingDetailsFromCode();
-  }, [trackingCode]);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "main"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "cover black",
-    "data-color": "black"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
-    className: "logo cursive"
-  }, "Jeay's Logistics"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "content"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
-    className: "motto"
-  }, "Track your shipped goods using our secured service channel."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "subscribe"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h5", {
-    className: "info-text"
-  }, "Enter your tracking number below to track your goods."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "row"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 "
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-inline",
-    role: "form"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "form-group",
-    style: {
-      width: '100%'
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "sr-only"
-  }, "Tracking Number"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    value: trackingCode,
-    onChange: initiateGetTrackingDetails,
-    type: "text",
-    style: {
-      textAlign: 'center',
-      textTransform: 'capitalize',
-      minHeight: '50px',
-      width: '100%',
-      borderTopRightRadius: '0px',
-      borderBottomRightRadius: '0px'
-    },
-    className: "form-control transparent",
-    placeholder: "Enter tracking number"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("small", {
-    style: {
-      display: 'block',
-      marginTop: '5px',
-      textAlign: 'center',
-      color: 'coral'
-    }
-  }, " Click outsite the box after typing tracking number "))))))))), trackingDetails && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, " Your tracking details "), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, " Name: ", trackingDetails.name), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, " Age: ", trackingDetails.age))));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, !trackingState.trackingDetails && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTracking__WEBPACK_IMPORTED_MODULE_4__["default"], null), trackingState.trackingDetails && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTrackingResult__WEBPACK_IMPORTED_MODULE_5__["default"], null));
 });
 
 /***/ }),
