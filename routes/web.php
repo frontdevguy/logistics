@@ -15,9 +15,4 @@ Route::get('{vuePage}', function () {
     return view('main');
 })->where('vuePage',  '.+|');
 
-Route::post('/tracking-details', function() {
-    return json_encode([
-        'name' => 'Jo',
-        'age' => '25'
-    ]);
-});
+Route::post('/tracking-details', 'TrackingController@details');

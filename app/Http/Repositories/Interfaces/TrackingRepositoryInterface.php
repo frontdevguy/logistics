@@ -1,0 +1,6 @@
+<?php
+namespace App\Http\Repositories\Interfaces;
+
+interface TrackingRepositoryInterface {
+    public function findByCode($trackingCode);
+}
