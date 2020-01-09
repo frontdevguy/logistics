@@ -10,7 +10,7 @@ class TrackingController extends Controller
 {
     public $trackingRepository = null;
 
-    public function construct(TrackingRepositoryInterface $trackingRepository) {
+    public function __construct(TrackingRepositoryInterface $trackingRepository) {
         $this->trackingRepository = $trackingRepository;
     }
 

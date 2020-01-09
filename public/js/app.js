@@ -58777,10 +58777,10 @@ window.axios.defaults.headers.common = {
 
 /***/ }),
 
-/***/ "./resources/js/components/HomeTracking.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/HomeTracking.js ***!
-  \*************************************************/
+/***/ "./resources/js/components/HomeTrackingRequest.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/HomeTrackingRequest.js ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -58790,7 +58790,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../api */ "./resources/js/api/index.js");
+/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api */ "./resources/js/api/index.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -59199,7 +59199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_homestyle_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style/homestyle.css */ "./resources/js/pages/style/homestyle.css");
 /* harmony import */ var _style_homestyle_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_homestyle_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contexts/TrackingContext */ "./resources/js/contexts/TrackingContext.js");
-/* harmony import */ var _components_HomeTracking__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/HomeTracking */ "./resources/js/components/HomeTracking.js");
+/* harmony import */ var _components_HomeTrackingRequest__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/HomeTrackingRequest */ "./resources/js/components/HomeTrackingRequest.js");
 /* harmony import */ var _components_HomeTrackingResult__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/HomeTrackingResult */ "./resources/js/components/HomeTrackingResult.js");
 
 
@@ -59212,7 +59212,7 @@ __webpack_require__.r(__webpack_exports__);
       trackingState = _useTrackingState.trackingState,
       updateTrackingState = _useTrackingState.updateTrackingState;
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, !trackingState.trackingDetails ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTracking__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, !trackingState.trackingDetails ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTrackingRequest__WEBPACK_IMPORTED_MODULE_6__["default"], {
     updateTrackingState: updateTrackingState
   }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTrackingResult__WEBPACK_IMPORTED_MODULE_5__["default"], {
     trackingState: trackingState

@@ -6,16 +6,14 @@ use App\Trackings;
 
 class TrackingRepository implements TrackingRepositoryInterface 
 {
-    public function construct()
+    public function __construct()
     {
         $this->model = new Trackings();
     }
 
     public function findByCode($trackingCode) : array
     {
-        $trackingDetails = $this->model->where('tracking_code', '=', $trackingCode)->get();
-        if(!$trackingDetails)  return [];
-        return $trackingDetails;
+        return $this->model->where('tracking_code', '=', $trackingCode)->get();
     }
 
 }
