@@ -58780,7 +58780,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../api */ "./resources/js/api/index.js");
-/* harmony import */ var _contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contexts/TrackingContext */ "./resources/js/contexts/TrackingContext.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -58803,15 +58802,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var updateTrackingState = _ref.updateTrackingState;
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
       trackingCode = _useState2[0],
       setTrackingCode = _useState2[1];
-
-  var _useTrackingState = Object(_contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__["useTrackingState"])(),
-      updateTrackingState = _useTrackingState.updateTrackingState;
 
   var initiateGetTrackingDetails = function initiateGetTrackingDetails(e) {
     setTrackingCode(e.target.value);
@@ -58826,7 +58823,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       _getTrackingDetailsFromCode = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var _ref, data;
+        var _ref2, data;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -58841,10 +58838,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
                 return _api__WEBPACK_IMPORTED_MODULE_2__["default"].getTrackingDetailsFromCode(trackingCode);
 
               case 3:
-                _ref = _context.sent;
-                data = _ref.data;
-                updateTrackingState(function (trackingState) {
-                  return _objectSpread({}, trackingState, {
+                _ref2 = _context.sent;
+                data = _ref2.data;
+                updateTrackingState(function (prevTrackingState) {
+                  return _objectSpread({}, prevTrackingState, {
                     trackingDetails: data
                   });
                 });
@@ -58928,15 +58925,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TrackingContext */ "./resources/js/contexts/TrackingContext.js");
 
-
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  var _useTrackingState = Object(_contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_1__["useTrackingState"])(),
-      _useTrackingState$tra = _useTrackingState.trackingState.trackingDetails,
-      name = _useTrackingState$tra.name,
-      age = _useTrackingState$tra.age;
-
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var trackingState = _ref.trackingState;
+  var _trackingState$tracki = trackingState.trackingDetails,
+      name = _trackingState$tracki.name,
+      age = _trackingState$tracki.age;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, " Your tracking result "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " Name: ", name, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, " Age: ", age, " ")));
 });
 
@@ -59202,9 +59196,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var _useTrackingState = Object(_contexts_TrackingContext__WEBPACK_IMPORTED_MODULE_3__["useTrackingState"])(),
-      trackingState = _useTrackingState.trackingState;
+      trackingState = _useTrackingState.trackingState,
+      updateTrackingState = _useTrackingState.updateTrackingState;
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, !trackingState.trackingDetails && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTracking__WEBPACK_IMPORTED_MODULE_4__["default"], null), trackingState.trackingDetails && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTrackingResult__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, !trackingState.trackingDetails ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTracking__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    updateTrackingState: updateTrackingState
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_HomeTrackingResult__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    trackingState: trackingState
+  }));
 });
 
 /***/ }),
@@ -59387,8 +59386,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\ogunb\Desktop\logistics\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\ogunb\Desktop\logistics\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\ogunb\desktop\logistics\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\ogunb\desktop\logistics\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

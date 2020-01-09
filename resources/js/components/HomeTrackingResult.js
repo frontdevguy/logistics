@@ -1,10 +1,7 @@
 import React from 'react';
-import {useTrackingState} from '../contexts/TrackingContext';
 
-
-
-export default () => {
-    const { trackingState: {trackingDetails: {name, age}} } = useTrackingState();
+export default ({trackingState}) => {
+    const {trackingDetails: {name, age}}  = trackingState;
     return (
         <>
            <h3> Your tracking result </h3>

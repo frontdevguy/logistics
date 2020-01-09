@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import api from './../api'
-import {useTrackingState} from '../contexts/TrackingContext';
 
-export default () => {
+export default ({updateTrackingState}) => {
     const [trackingCode, setTrackingCode] = useState('')
-    const { updateTrackingState } = useTrackingState();
 
     const initiateGetTrackingDetails = (e) => {
         setTrackingCode(e.target.value);
@@ -14,7 +12,7 @@ export default () => {
         async function getTrackingDetailsFromCode() {
             if(trackingCode) {
                 const {data} = await api.getTrackingDetailsFromCode(trackingCode);
-                updateTrackingState( (trackingState) => ({...trackingState, trackingDetails: data}))
+                updateTrackingState( (prevTrackingState) => ({...prevTrackingState, trackingDetails: data}))
             }
         }
         getTrackingDetailsFromCode();
