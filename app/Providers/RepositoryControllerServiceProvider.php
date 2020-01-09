@@ -14,8 +14,8 @@ class RepositoryControllerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'App\Repositories\Interfaces\TrackingRepositoryInterface',
-            'App\Repositories\TrackingRepository'
+            'App\Http\Repositories\Interfaces\TrackingRepositoryInterface',
+            'App\Http\Repositories\TrackingRepository'
         );
     }
 

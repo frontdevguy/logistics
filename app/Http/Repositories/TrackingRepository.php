@@ -11,7 +11,13 @@ class TrackingRepository implements TrackingRepositoryInterface
         $this->model = new Trackings();
     }
 
-    public function findByCode($trackingCode) : array
+    /**
+     * Retrieves tracking details of code
+     * 
+     * @param string $tranckingCode
+     * @return object
+     */
+    public function findByCode(string $trackingCode) : object
     {
         return $this->model->where('tracking_code', '=', $trackingCode)->get();
     }

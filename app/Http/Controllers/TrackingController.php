@@ -19,10 +19,10 @@ class TrackingController extends Controller
      * for a specified tracking code
      * 
      * @param RetrieveDetailsRequest $request
-     * @return array
+     * @return object
      */
-    public function details(RetrieveDetailsRequest $request) : array
+    public function details(RetrieveDetailsRequest $request) : object
     {
-        return [];        //$this->trackingRepository->findByCode($request->trackingCode);
+        return \Response::json($this->trackingRepository->findByCode($request->trackingCode));
     }
 }
