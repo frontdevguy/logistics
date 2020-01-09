@@ -58689,7 +58689,7 @@ function () {
               case 0:
                 _context.next = 2;
                 return _axios.post('/tracking-details', {
-                  trackingCode: trackingCode
+                  trackingCodes: trackingCode
                 });
 
               case 2:

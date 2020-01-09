@@ -27,4 +27,18 @@ class RetrieveDetailsRequest extends FormRequest
             'trackingCode' => 'required'
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'trackingCode.required' => 'Your tracking code is required'
+        ];
+    }
+
+
 }
