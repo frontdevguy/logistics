@@ -12,4 +12,8 @@ The above will create an environment file. Set appropriately.
 
 ## Run application
 
+`npm install`
+
+`npm run watch`
+
 `php artisan serve`
