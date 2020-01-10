@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style/homestyle.css';
+import './style/new-homestyle.css';
 import { useTrackingState } from '../contexts/TrackingContext';
 import HomeTrackingRequest from '../components/HomeTrackingRequest';
 import HomeTrackingResult from '../components/HomeTrackingResult';

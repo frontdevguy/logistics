@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../api'
+import logo from '../../img/logo-transparent.png';
 
 export default ({updateTrackingState}) => {
     const [trackingCode, setTrackingCode] = useState('')
@@ -20,7 +21,31 @@ export default ({updateTrackingState}) => {
 
     return (
         <>
-            <div className="main">
+            <div className="home-wrapper">
+                <div className="design"></div>
+                <div className="design-1"></div>
+                <div className="design-2"></div>
+                <div style={{position: 'relative'}}><a className="site-logo"><img src={logo} /></a></div>
+                <div className="site-motto">Track your shipped goods using our secured service channel.</div>
+                <p className="site-made-wth"> Made with love by @frontdevguy</p>
+                <br />
+                <div className="main-request-area">   
+                    <div className="demo-preview-art"></div>
+                    <div className="request-card">
+                        
+
+                        <div className="input-card-container">
+                            <div className="enter-info-header">
+                                <h3> Enter your tracking number below </h3>
+                            </div>
+                            <input className="tracking-code-input" />
+
+                            <button className="run-tracking"> Track Now </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="main">
                 <div className="cover black" data-color="black"></div>
                     <div className="container">
                         <h1 className="logo cursive">
@@ -46,7 +71,7 @@ export default ({updateTrackingState}) => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
         </>
     )
 }

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:  linear-gradient(60deg, white, rgba(13, 17, 20, 0.1), white), #fff;
+    min-height: 100vh;
+}
+
+.home-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.site-logo {
+    position: absolute;
+    top: 20px;
+    left: 2%;
+    /* margin-left: -100px; */
+}
+
+.site-motto {
+    position: absolute;
+    top: 20px;
+    background: rgba(39, 218, 119, 0.7);
+    right: 2%;
+    font-size: 15px;
+    color: white;
+    padding: 12px;
+    font-family: 'Open Sans';
+    border: 2px solid rgba(39, 218, 119, 0.7);
+}
+
+.site-made-wth {
+    position: absolute;
+    bottom: 10px;
+    left: 2%;
+    font-size: 13px;
+    padding: 6px;
+    font-family: 'Open Sans';
+    border: 2px dashed rgb(56, 56, 56);
+}
+
+.site-logo img {
+    width: 170px;
+    height: 110px;
+}
+
+.design {
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    width: 250px;
+    max-width: 70%;
+    height: 250px;
+    clip-path: polygon(45% 59%, 64% 7%, 98% 31%, 0 35%);
+    background: rgba(227, 101, 112,0.3);
+}
+
+.design-1 {
+    position: absolute;
+    top: -25%;
+    right: 2%;
+    width: 350px;
+    transform: rotate(90deg);
+    max-width: 70%;
+    height: 80vh;
+    background: rgba(50, 205, 50,0.6);
+    clip-path: polygon(48% 84%, 62% 61%, 46% 36%, 61% 17%, 69% 24%, 64% 38%, 68% 57%, 67% 73%, 61% 86%);
+}
+
+.design-2 {
+    position: absolute;
+    width: 200px;
+    max-width: 70%;
+    bottom: 10%;
+    height: 200px;
+    right: 16%;
+    background: rgba(86, 118, 163,0.3);
+    clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);
+}
+
+.main-request-area {
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - 20px);
+}
+
+.demo-preview-art {
+    display: block;
+    width: 70%;
+    background:  url('../../../img/eastwood-downloading.png');
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: center;
+}
+
+.request-card {
+    float: right;
+    width: 25%;
+    max-width: 400px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.enter-info-header {
+    margin-top: 30vh;
+    margin: 5px;
+    padding: 0px 10px;
+}
+
+.enter-info-header h3 {
+    font-size: 25px;
+    font-family: 'Grand Hotel';
+    text-align: center;
+    color: darkslategray;
+}
+
+.input-card-container {
+    margin: 5px;
+    border: 3px dashed darkslategray;
+    background: white;
+    padding-bottom: 20px;
+    margin-top: 180px;
+    margin-right: 20px;
+}
+
+.tracking-code-input {
+    display: block;
+    width: 100%;
+    padding: 25px 10px;
+    border: none;
+    border-top: 4px ridge slategray;
+    border-bottom: 4px ridge slategray;
+    margin-top: 40px;
+    outline: none;
+    font-family: monospace;
+    color: rgb(156, 33, 43);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    background: rgba(112, 128, 144,0.4);
+}
+
+.run-tracking {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    margin-top: 30px;
+    outline: none;
+    background: rgb(69, 56, 94);
+    padding: 10px 0;
+    color: white;
+    font-family: 'Open Sans';
+    border: 1px solid rgb(69, 56, 94);
+    border-radius: 8px;
+}
