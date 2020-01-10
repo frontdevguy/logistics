@@ -61,6 +61,7 @@ body {
     height: 250px;
     clip-path: polygon(45% 59%, 64% 7%, 98% 31%, 0 35%);
     background: rgba(227, 101, 112,0.3);
+    z-index: 1;
 }
 
 .design-1 {
@@ -73,6 +74,7 @@ body {
     height: 80vh;
     background: rgba(50, 205, 50,0.6);
     clip-path: polygon(48% 84%, 62% 61%, 46% 36%, 61% 17%, 69% 24%, 64% 38%, 68% 57%, 67% 73%, 61% 86%);
+    z-index: 1;
 }
 
 .design-2 {
@@ -83,6 +85,7 @@ body {
     height: 200px;
     right: 16%;
     background: rgba(86, 118, 163,0.3);
+    z-index: 1;
     clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);
 }
 
@@ -161,4 +164,6 @@ body {
     font-family: 'Open Sans';
     border: 1px solid rgb(69, 56, 94);
     border-radius: 8px;
+    position: relative;
+    z-index: 2;
 }

@@ -2052,7 +2052,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ope
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Grand+Hotel);", ""]);
 
 // module
-exports.push([module.i, "* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    background:  linear-gradient(60deg, white, rgba(13, 17, 20, 0.1), white), #fff;\r\n    min-height: 100vh;\r\n}\r\n\r\n.home-wrapper {\r\n    width: 100%;\r\n    overflow: hidden;\r\n    position: relative;\r\n}\r\n\r\n.site-logo {\r\n    position: absolute;\r\n    top: 20px;\r\n    left: 2%;\r\n    /* margin-left: -100px; */\r\n}\r\n\r\n.site-motto {\r\n    position: absolute;\r\n    top: 20px;\r\n    background: rgba(39, 218, 119, 0.7);\r\n    right: 2%;\r\n    font-size: 15px;\r\n    color: white;\r\n    padding: 12px;\r\n    font-family: 'Open Sans';\r\n    border: 2px solid rgba(39, 218, 119, 0.7);\r\n}\r\n\r\n.site-made-wth {\r\n    position: absolute;\r\n    bottom: 10px;\r\n    left: 2%;\r\n    font-size: 13px;\r\n    padding: 6px;\r\n    font-family: 'Open Sans';\r\n    border: 2px dashed rgb(56, 56, 56);\r\n}\r\n\r\n.site-logo img {\r\n    width: 170px;\r\n    height: 110px;\r\n}\r\n\r\n.design {\r\n    position: absolute;\r\n    top: 50px;\r\n    left: 45%;\r\n    width: 250px;\r\n    max-width: 70%;\r\n    height: 250px;\r\n    -webkit-clip-path: polygon(45% 59%, 64% 7%, 98% 31%, 0 35%);\r\n            clip-path: polygon(45% 59%, 64% 7%, 98% 31%, 0 35%);\r\n    background: rgba(227, 101, 112,0.3);\r\n}\r\n\r\n.design-1 {\r\n    position: absolute;\r\n    top: -25%;\r\n    right: 2%;\r\n    width: 350px;\r\n    -webkit-transform: rotate(90deg);\r\n            transform: rotate(90deg);\r\n    max-width: 70%;\r\n    height: 80vh;\r\n    background: rgba(50, 205, 50,0.6);\r\n    -webkit-clip-path: polygon(48% 84%, 62% 61%, 46% 36%, 61% 17%, 69% 24%, 64% 38%, 68% 57%, 67% 73%, 61% 86%);\r\n            clip-path: polygon(48% 84%, 62% 61%, 46% 36%, 61% 17%, 69% 24%, 64% 38%, 68% 57%, 67% 73%, 61% 86%);\r\n}\r\n\r\n.design-2 {\r\n    position: absolute;\r\n    width: 200px;\r\n    max-width: 70%;\r\n    bottom: 10%;\r\n    height: 200px;\r\n    right: 16%;\r\n    background: rgba(86, 118, 163,0.3);\r\n    -webkit-clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);\r\n            clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);\r\n}\r\n\r\n.main-request-area {\r\n    overflow: hidden;\r\n    width: 100%;\r\n    height: calc(100vh - 20px);\r\n}\r\n\r\n.demo-preview-art {\r\n    display: block;\r\n    width: 70%;\r\n    background:  url(" + escape(__webpack_require__(/*! ../../../img/eastwood-downloading.png */ "./resources/img/eastwood-downloading.png")) + ");\r\n    height: 100%;\r\n    float: left;\r\n    background-size: cover;\r\n    background-position: center;\r\n}\r\n\r\n.request-card {\r\n    float: right;\r\n    width: 25%;\r\n    max-width: 400px;\r\n    height: 100%;\r\n    overflow: hidden;\r\n}\r\n\r\n.enter-info-header {\r\n    margin-top: 30vh;\r\n    margin: 5px;\r\n    padding: 0px 10px;\r\n}\r\n\r\n.enter-info-header h3 {\r\n    font-size: 25px;\r\n    font-family: 'Grand Hotel';\r\n    text-align: center;\r\n    color: darkslategray;\r\n}\r\n\r\n.input-card-container {\r\n    margin: 5px;\r\n    border: 3px dashed darkslategray;\r\n    background: white;\r\n    padding-bottom: 20px;\r\n    margin-top: 180px;\r\n    margin-right: 20px;\r\n}\r\n\r\n.tracking-code-input {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 25px 10px;\r\n    border: none;\r\n    border-top: 4px ridge slategray;\r\n    border-bottom: 4px ridge slategray;\r\n    margin-top: 40px;\r\n    outline: none;\r\n    font-family: monospace;\r\n    color: rgb(156, 33, 43);\r\n    font-size: 25px;\r\n    text-transform: uppercase;\r\n    font-family: 'Open Sans';\r\n    background: rgba(112, 128, 144,0.4);\r\n}\r\n\r\n.run-tracking {\r\n    display: block;\r\n    width: 200px;\r\n    margin: 10px auto;\r\n    margin-top: 30px;\r\n    outline: none;\r\n    background: rgb(69, 56, 94);\r\n    padding: 10px 0;\r\n    color: white;\r\n    font-family: 'Open Sans';\r\n    border: 1px solid rgb(69, 56, 94);\r\n    border-radius: 8px;\r\n}", ""]);
+exports.push([module.i, "* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    background:  linear-gradient(60deg, white, rgba(13, 17, 20, 0.1), white), #fff;\r\n    min-height: 100vh;\r\n}\r\n\r\n.home-wrapper {\r\n    width: 100%;\r\n    overflow: hidden;\r\n    position: relative;\r\n}\r\n\r\n.site-logo {\r\n    position: absolute;\r\n    top: 20px;\r\n    left: 2%;\r\n    /* margin-left: -100px; */\r\n}\r\n\r\n.site-motto {\r\n    position: absolute;\r\n    top: 20px;\r\n    background: rgba(39, 218, 119, 0.7);\r\n    right: 2%;\r\n    font-size: 15px;\r\n    color: white;\r\n    padding: 12px;\r\n    font-family: 'Open Sans';\r\n    border: 2px solid rgba(39, 218, 119, 0.7);\r\n}\r\n\r\n.site-made-wth {\r\n    position: absolute;\r\n    bottom: 10px;\r\n    left: 2%;\r\n    font-size: 13px;\r\n    padding: 6px;\r\n    font-family: 'Open Sans';\r\n    border: 2px dashed rgb(56, 56, 56);\r\n}\r\n\r\n.site-logo img {\r\n    width: 170px;\r\n    height: 110px;\r\n}\r\n\r\n.design {\r\n    position: absolute;\r\n    top: 50px;\r\n    left: 45%;\r\n    width: 250px;\r\n    max-width: 70%;\r\n    height: 250px;\r\n    -webkit-clip-path: polygon(45% 59%, 64% 7%, 98% 31%, 0 35%);\r\n            clip-path: polygon(45% 59%, 64% 7%, 98% 31%, 0 35%);\r\n    background: rgba(227, 101, 112,0.3);\r\n    z-index: 1;\r\n}\r\n\r\n.design-1 {\r\n    position: absolute;\r\n    top: -25%;\r\n    right: 2%;\r\n    width: 350px;\r\n    -webkit-transform: rotate(90deg);\r\n            transform: rotate(90deg);\r\n    max-width: 70%;\r\n    height: 80vh;\r\n    background: rgba(50, 205, 50,0.6);\r\n    -webkit-clip-path: polygon(48% 84%, 62% 61%, 46% 36%, 61% 17%, 69% 24%, 64% 38%, 68% 57%, 67% 73%, 61% 86%);\r\n            clip-path: polygon(48% 84%, 62% 61%, 46% 36%, 61% 17%, 69% 24%, 64% 38%, 68% 57%, 67% 73%, 61% 86%);\r\n    z-index: 1;\r\n}\r\n\r\n.design-2 {\r\n    position: absolute;\r\n    width: 200px;\r\n    max-width: 70%;\r\n    bottom: 10%;\r\n    height: 200px;\r\n    right: 16%;\r\n    background: rgba(86, 118, 163,0.3);\r\n    z-index: 1;\r\n    -webkit-clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);\r\n            clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);\r\n}\r\n\r\n.main-request-area {\r\n    overflow: hidden;\r\n    width: 100%;\r\n    height: calc(100vh - 20px);\r\n}\r\n\r\n.demo-preview-art {\r\n    display: block;\r\n    width: 70%;\r\n    background:  url(" + escape(__webpack_require__(/*! ../../../img/eastwood-downloading.png */ "./resources/img/eastwood-downloading.png")) + ");\r\n    height: 100%;\r\n    float: left;\r\n    background-size: cover;\r\n    background-position: center;\r\n}\r\n\r\n.request-card {\r\n    float: right;\r\n    width: 25%;\r\n    max-width: 400px;\r\n    height: 100%;\r\n    overflow: hidden;\r\n}\r\n\r\n.enter-info-header {\r\n    margin-top: 30vh;\r\n    margin: 5px;\r\n    padding: 0px 10px;\r\n}\r\n\r\n.enter-info-header h3 {\r\n    font-size: 25px;\r\n    font-family: 'Grand Hotel';\r\n    text-align: center;\r\n    color: darkslategray;\r\n}\r\n\r\n.input-card-container {\r\n    margin: 5px;\r\n    border: 3px dashed darkslategray;\r\n    background: white;\r\n    padding-bottom: 20px;\r\n    margin-top: 180px;\r\n    margin-right: 20px;\r\n}\r\n\r\n.tracking-code-input {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 25px 10px;\r\n    border: none;\r\n    border-top: 4px ridge slategray;\r\n    border-bottom: 4px ridge slategray;\r\n    margin-top: 40px;\r\n    outline: none;\r\n    font-family: monospace;\r\n    color: rgb(156, 33, 43);\r\n    font-size: 25px;\r\n    text-transform: uppercase;\r\n    font-family: 'Open Sans';\r\n    background: rgba(112, 128, 144,0.4);\r\n}\r\n\r\n.run-tracking {\r\n    display: block;\r\n    width: 200px;\r\n    margin: 10px auto;\r\n    margin-top: 30px;\r\n    outline: none;\r\n    background: rgb(69, 56, 94);\r\n    padding: 10px 0;\r\n    color: white;\r\n    font-family: 'Open Sans';\r\n    border: 1px solid rgb(69, 56, 94);\r\n    border-radius: 8px;\r\n    position: relative;\r\n    z-index: 2;\r\n}", ""]);
 
 // exports
 
@@ -58824,8 +58824,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       trackingCode = _useState2[0],
       setTrackingCode = _useState2[1];
 
+  var trackingCodeRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
+
   var initiateGetTrackingDetails = function initiateGetTrackingDetails(e) {
-    setTrackingCode(e.target.value);
+    var value = trackingCodeRef.current.value;
+    if (value) setTrackingCode(value);
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
@@ -58874,12 +58877,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   }, [trackingCode]);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "home-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "design"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "design-1"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "design-2"
+  }, ['design', 'design-1', 'design-2'].map(function (element) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: element
+    });
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: {
       position: 'relative'
@@ -58892,7 +58893,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     className: "site-motto"
   }, "Track your shipped goods using our secured service channel."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "site-made-wth"
-  }, " Made with love by @frontdevguy"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, " Made with love by @frontdevguy"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "main-request-area"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "demo-preview-art"
@@ -58903,9 +58904,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "enter-info-header"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, " Enter your tracking number below ")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    ref: trackingCodeRef,
     className: "tracking-code-input"
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-    className: "run-tracking"
+    className: "run-tracking",
+    onClick: initiateGetTrackingDetails
   }, " Track Now "))))));
 });
 
