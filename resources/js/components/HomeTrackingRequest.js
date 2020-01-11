@@ -3,11 +3,17 @@ import api from '../api'
 
 export default ({updateTrackingState}) => {
     const [trackingCode, setTrackingCode] = useState('')
+    const [shouldInputError, setShouldInputError] = useState(false)
     const trackingCodeRef = useRef(null);
 
-    const initiateGetTrackingDetails = (e) => {
+    const removeTrackingInputError = () => {
+        if(shouldInputError) return setShouldInputError(false);
+    }
+
+    const initiateGetTrackingDetails = () => {
         const {value} = trackingCodeRef.current;
-        if(value) setTrackingCode(value);
+        if(!value) return setShouldInputError(true);
+        setTrackingCode(value);
     }
 
     useEffect (() => {
@@ -30,7 +36,8 @@ export default ({updateTrackingState}) => {
                             <div className="enter-info-header">
                                 <h3> Track your shipped goods using our secured service channel </h3>
                             </div>
-                            <input spellCheck="false" ref={trackingCodeRef} className="tracking-code-input" placeholder="Enter tracking code"/>
+                            <input onFocus={removeTrackingInputError} spellCheck="false" ref={trackingCodeRef} className="tracking-code-input" placeholder="Enter tracking code"/>
+                            { shouldInputError && <p className="tracking-code-input-error">Input a tracking code to initiate process</p> }
                             <button className="run-tracking" onClick={initiateGetTrackingDetails}> Initiate Tracking Process </button>
                         </div>
                     </div>

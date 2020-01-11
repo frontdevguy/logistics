@@ -10,11 +10,9 @@ export default () => {
     const { trackingState, updateTrackingState } = useTrackingState();
     return (
         <>
+            <Header />
            {!trackingState.trackingDetails ? (
-               <>
-                    <Header />
-                    <HomeTrackingRequest updateTrackingState={updateTrackingState} /> 
-               </>
+                <HomeTrackingRequest updateTrackingState={updateTrackingState} /> 
            ): (
                 <HomeTrackingResult trackingState={trackingState} />
            )}

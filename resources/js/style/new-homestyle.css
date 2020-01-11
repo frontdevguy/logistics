@@ -157,3 +157,11 @@ body {
     z-index: 2;
     box-shadow: 0 0 5px rgba(128, 128, 128,0.2);
 }
+
+.tracking-code-input-error {
+    display: block;
+    margin: 10px auto;
+    color: orangered;
+    text-align: center;
+    font-size: 12px;
+}
