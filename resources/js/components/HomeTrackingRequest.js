@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import api from '../api'
-import logo from '../../img/logo-transparent.png';
 
 export default ({updateTrackingState}) => {
     const [trackingCode, setTrackingCode] = useState('')
@@ -24,19 +23,15 @@ export default ({updateTrackingState}) => {
     return (
         <>
             <div className="home-wrapper">
-                {['design','design-1','design-2'].map(element => <div className={element}></div>)}
-                <div style={{position: 'relative'}}><a className="site-logo"><img src={logo} /></a></div>
-                <div className="site-motto">Track your shipped goods using our secured service channel.</div>
-                <p className="site-made-wth"> Made with love by @frontdevguy</p>
+            <p className="site-made-wth"> Made with love by @frontdevguy</p>
                 <div className="main-request-area">   
-                    <div className="demo-preview-art"></div>
-                    <div className="request-card">
+                    <div className="demo-preview-art">'
                         <div className="input-card-container">
                             <div className="enter-info-header">
-                                <h3> Enter your tracking number below </h3>
+                                <h3> Track your shipped goods using our secured service channel </h3>
                             </div>
-                            <input ref={trackingCodeRef} className="tracking-code-input" />
-                            <button className="run-tracking" onClick={initiateGetTrackingDetails}> Track Now </button>
+                            <input spellCheck="false" ref={trackingCodeRef} className="tracking-code-input" placeholder="Enter tracking code"/>
+                            <button className="run-tracking" onClick={initiateGetTrackingDetails}> Initiate Tracking Process </button>
                         </div>
                     </div>
                 </div>

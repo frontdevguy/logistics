@@ -8,8 +8,11 @@
 }
 
 body {
-    background:  linear-gradient(60deg, white, rgba(13, 17, 20, 0.1), white), #fff;
+    background:  linear-gradient(60deg, whitesmoke, rgba(13, 17, 20, 0.1), white), url('../../img/black-sail-ship-on-body-of-water-906982.jpg');
     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .home-wrapper {
@@ -18,18 +21,11 @@ body {
     position: relative;
 }
 
-.site-logo {
-    position: absolute;
-    top: 20px;
-    left: 2%;
-    /* margin-left: -100px; */
-}
-
 .site-motto {
     position: absolute;
     top: 20px;
     background: rgba(39, 218, 119, 0.7);
-    right: 2%;
+    right: 1%;
     font-size: 15px;
     color: white;
     padding: 12px;
@@ -44,12 +40,8 @@ body {
     font-size: 13px;
     padding: 6px;
     font-family: 'Open Sans';
-    border: 2px dashed rgb(56, 56, 56);
-}
-
-.site-logo img {
-    width: 170px;
-    height: 110px;
+    color: slategrey;
+    border: 2px dashed slategrey;
 }
 
 .design {
@@ -66,14 +58,13 @@ body {
 
 .design-1 {
     position: absolute;
-    top: -25%;
+    top: 10%;
     right: 2%;
-    width: 350px;
-    transform: rotate(90deg);
+    width: 150px;
     max-width: 70%;
-    height: 80vh;
-    background: rgba(50, 205, 50,0.6);
-    clip-path: polygon(48% 84%, 62% 61%, 46% 36%, 61% 17%, 69% 24%, 64% 38%, 68% 57%, 67% 73%, 61% 86%);
+    height: 20vh;
+    background: rgba(50, 205, 50,0.2);
+    clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);
     z-index: 1;
 }
 
@@ -83,7 +74,7 @@ body {
     max-width: 70%;
     bottom: 10%;
     height: 200px;
-    right: 16%;
+    right: 25%;
     background: rgba(86, 118, 163,0.3);
     z-index: 1;
     clip-path: polygon(50% 44%, 73% 23%, 97% 36%, 90% 64%, 74% 83%, 50% 100%, 35% 86%, 15% 70%, 4% 39%, 26% 22%);
@@ -93,25 +84,17 @@ body {
     overflow: hidden;
     width: 100%;
     height: calc(100vh - 20px);
+    position: relative;
+    max-width: 1860px;
+    margin: 0 auto;
+    margin-top: -50px;
 }
 
 .demo-preview-art {
     display: block;
-    width: 70%;
-    background:  url('../../../img/eastwood-downloading.png');
-    height: 100%;
-    float: left;
-    background-size: cover;
-    background-position: center;
+    width: 100%
 }
 
-.request-card {
-    float: right;
-    width: 25%;
-    max-width: 400px;
-    height: 100%;
-    overflow: hidden;
-}
 
 .enter-info-header {
     margin-top: 30vh;
@@ -120,36 +103,42 @@ body {
 }
 
 .enter-info-header h3 {
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Grand Hotel';
     text-align: center;
     color: darkslategray;
 }
 
 .input-card-container {
-    margin: 5px;
-    border: 3px dashed darkslategray;
-    background: white;
-    padding-bottom: 20px;
-    margin-top: 180px;
-    margin-right: 20px;
+    border: 2px solid rgba(0,0,0, 0.01);
+    background: rgba(245, 235, 235,0.95);
+    padding: 20px;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0,0.1);
+    border-radius: 4px;
+    width: 390px;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 25vh;
+    overflow: hidden;
 }
 
 .tracking-code-input {
     display: block;
     width: 100%;
-    padding: 25px 10px;
+    padding: 20px 10px;
     border: none;
-    border-top: 4px ridge slategray;
-    border-bottom: 4px ridge slategray;
-    margin-top: 40px;
+    border-top: 2px dashed slategray;
+    border-bottom: 2px dashed slategray;
+    border-left: 2px dashed slategray;
+    border-right: 2px dashed slategray;
+    margin-top: 30px;
     outline: none;
     font-family: monospace;
-    color: rgb(156, 33, 43);
-    font-size: 25px;
+    font-size: 15px;
+    text-align: center;
     text-transform: uppercase;
     font-family: 'Open Sans';
-    background: rgba(112, 128, 144,0.4);
+    background: rgba(112, 128, 144,0.1);
 }
 
 .run-tracking {
@@ -163,7 +152,8 @@ body {
     color: white;
     font-family: 'Open Sans';
     border: 1px solid rgb(69, 56, 94);
-    border-radius: 8px;
+    border-radius: 5px;
     position: relative;
     z-index: 2;
+    box-shadow: 0 0 5px rgba(128, 128, 128,0.2);
 }

@@ -1,0 +1,55 @@
+.main-header {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    background: rgba(217, 213, 224,0.3);
+    border-bottom: 0px solid rgba(0,0,0,0.03);
+    box-shadow: 0 0 10px rgba(51, 51, 51,0.12);
+    padding: 0 35px;
+}
+
+.site-logo {
+    display: block;
+    float: left;
+}
+
+.main-nav-links {
+    float: right;
+    margin: 15px 0 0 0;
+}
+
+.main-nav-links li {
+    list-style: none;
+}
+
+.site-logo img {
+    width: 110px;
+    height: 70px;
+}
+
+.nav-link {
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+.nav-link a {
+    text-decoration: none;
+    font-family: 'Open Sans';
+    padding: 10px;
+    display: inline-block;
+    text-transform: capitalize;
+    color: darkslategray;
+    transition: all linear 0.1s;
+    border: 1px solid transparent;
+}
+
+.nav-link a:hover {
+    background: rgba(0,0,0,0.03);
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
